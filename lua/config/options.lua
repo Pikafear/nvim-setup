@@ -28,3 +28,18 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true -- When on, splitting a window will put the new window below the current one
 vim.opt.termguicolors = true
 vim.opt.wrap = true
+
+vim.g.autoformat = false
+
+vim.cmd([[
+function DetectGoHtmlTmpl()
+    if expand('%:e') == "html" && search("{{") != 0
+        setfiletype gohtmltmpl
+    endif
+endfunction
+
+augroup filetypedetect
+    " gohtmltmpl
+    au BufRead,BufNewFile *.html call DetectGoHtmlTmpl()
+augroup END
+]])
