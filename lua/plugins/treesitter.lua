@@ -4,6 +4,7 @@
 
 return {
   "nvim-treesitter/nvim-treesitter",
+  lazy = true,
   -- Optional: add the `run` key to automatically update parsers after install
   run = ":TSUpdate",
   --  opts = {

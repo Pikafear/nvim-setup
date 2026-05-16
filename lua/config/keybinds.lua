@@ -1,6 +1,10 @@
 -- vim.keymap.set("n", "<C-x>", ":BufferLinePickClose", { desc = "Kill a tab! Can pick if want to" })
 vim.keymap.set("n", "<C-x>", ":bp <BAR> bd #<CR>", { desc = "Kill a tab!" }) -- Kills the current tab and focuses on the next one
 
+-- When using :b <tab>, get the last tab! This will sort with most recent being last used
+vim.opt.wildmode = { "lastused" } 
+
+-- A nice way to exit
 vim.keymap.set("i", "jj", "<Esc>")
 vim.cmd("inoremap j<Esc> `")
 
@@ -27,4 +31,8 @@ vim.keymap.set("n", "<leader>jj", ":vertical resize -10", { desc = "Resize your 
 vim.keymap.set("n", "<leader>]", ":NvimTreeFindFile<Enter>", { desc = "Open Nvimtree with focused file" })
 vim.keymap.set("n", "<leader>[", ":NvimTreeClose<Enter>", { desc = "Close Nvimtree" })
 
+
 -- vim.cmd('let mapleader = " "') -- Also set within the other lua file for lazy
+
+-- Allows resizing of your windows through... your mouse!
+vim.cmd("set mouse=a")
