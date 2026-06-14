@@ -7,7 +7,8 @@ vim.opt.winbar = "%=%m %f"
 -- Editor options
 vim.opt.number = true -- Print the line number in front of each line
 vim.opt.relativenumber = true -- Show the line number relative to the line with the cursor in front of each line.
-vim.opt.clipboard = "unnamedplus" -- uses the clipboard register for all operations except yank.
+-- vim.opt.clipboard = "unnamedplus" -- uses the clipboard register for all operations except yank.
+vim.opt.clipboard = '' -- Use nvim clipboard rather than system. Useful for keeping these opts distinct
 vim.opt.syntax = "on" -- When this option is set, the syntax with this name is loaded.
 vim.opt.autoindent = true -- Copy indent from current line when starting a new line.
 vim.opt.cursorline = true -- Highlight the screen line of the cursor with CursorLine.
